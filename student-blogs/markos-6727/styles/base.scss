@@ -1,0 +1,144 @@
+// VARIABLES
+
+$ffamily: Arial;
+$bg-color-GrayNickel :#C3C3BD;
+$sec-color-BlackHaze: #F6F7F7;
+$fp-color-Abbey: #555;
+$fs-title-1: 2em;
+$fs-title-2: 1.7em;
+$fs-content: 1.5em;
+$fs-subtext: .7em;
+$fw-bold: 900;
+
+// RESET
+
+html, body {
+  background-color: $bg-color-GrayNickel;
+  font-family: $ffamily;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+ul, li {
+  padding: 0;
+	margin: 0;
+}
+
+* {
+	margin: inherit;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  border: 1px dashed blue;
+  padding: 10px 10px;
+}
+
+// MENU DE NAVEGACION
+
+nav {
+  grid-column: 1 / 4;
+  grid-row: auto;
+  border: 1px dashed blue;
+}
+
+.menu {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  margin: 5px 0;  
+  list-style: none;
+}
+
+li {
+  margin: 10px 0;
+}
+
+.menu-items a{
+  text-decoration: none;
+  color: $fp-color-Abbey;
+}
+
+// CONTENIDO PRINCIPAL
+
+.section-title {
+  grid-column: span 4;
+  margin: 20px 0;
+  font-size: $fs-title-1;
+}
+
+.card-container {
+  grid-column: span 4;
+  grid-row: auto;
+}
+
+.card-art {
+  margin: 20px 0;
+  padding: 0 10px;
+  background-color: $sec-color-BlackHaze;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px dashed blue;
+  box-shadow: 1px 1px 7px black;
+  
+  h3 {
+    font-size: $fs-title-2;
+  }
+  
+  p {
+    line-height: 1.5;
+    font-size: $fs-content;
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+}
+
+.autor-tag {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  font-weight: $fw-bold;
+  color: $fp-color-Abbey;
+  font-size: $fs-subtext;
+}
+
+.autor {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid $fp-color-Abbey;
+  }
+}
+
+// FOOTER
+
+.footer {
+  display: flex;
+  height: 40px; 
+  grid-column: span 4;
+  border: 2px dashed blue;
+  justify-content: center;
+  align-items: center;
+  font-weight: $fw-bold;
+  color: $fp-color-Abbey;
+}

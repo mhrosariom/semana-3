@@ -1,0 +1,53 @@
+// MIXINS
+
+@mixin desktop {
+  
+  @media screen and (min-width: 900px) {
+    @content
+  }
+
+}
+
+.container {
+  @include desktop(){
+    max-width: 90%;    
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 4, 1fr 2fr 1fr;
+  }
+}
+
+.menu {  
+  @include desktop(){
+    flex-direction: row;
+    justify-content: space-around;    
+  }
+}
+
+body {
+  @include desktop(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card-container {
+  @include desktop() {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+} 
+
+.destacados {
+  @include desktop() {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+  }
+}
+
+
+
